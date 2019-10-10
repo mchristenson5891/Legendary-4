@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+  text-align: center;
+  font-family: 'Trade Winds', cursive;
+  background-image: url("img/flowers.png");
+  background-repeat: repeat-x;
+  background-repeat: repeat;
+  height: 100px;
+  animation: animatedBackground 15s linear infinite;
+  /* animation: animatedBackground 1s pulse infinite; */
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+.game {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 650px;
+  height: 520px;
+  background: rgba(17, 17, 202, 0.836);
+  border: 5px solid black;
+  box-shadow: 5px 5px;
+  padding: 1.5rem;
+
+}
+
+.slot {
+  width: 90px;
+  height: 90px;
+  background:white;
+  border: 1px solid black;
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
+
+h1 {
+  /* text-align: center; */
+  /* margin-bottom: 100px; */
+  position: relative;
+  top: 50px;
+  font-size: 80px;
+}
+
+.winners {
+  font-size: 100px;
+  position: absolute;
+  z-index: 1;
+  left: 530px;
+  top: 180px;
+  /* text-align: center; */
+  
+}
+
+.footer {
+  position: relative;
+  top: 760px;
+  font-size: 35px;
+  color: black;
+  background-color: azure;
+  height: 45px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: antiquewhite;
+    text-align: center;
+    font-family: 'Trade Winds', cursive;
+    background-image: url("img/flowers.png");
+    background-repeat: repeat-x;
+    background-repeat: repeat;
+    height: 2px;
+    animation: animatedBackground 15s linear infinite;
+    /* animation: animatedBackground 1s pulse infinite; */
+  }
+  
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+  
+  .game {
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
+    height: 520px;
+    background: rgba(17, 17, 202, 0.836);
+    border: 5px solid black;
+    box-shadow: 5px 5px;
+    padding: 1.5rem;
+  
+  }
+  
+  .slot {
+    width: 70px;
+    height: 90px;
+    background:white;
+    border: 1px solid black;
+    /* border-radius: 50%; */
+    cursor: pointer;
+  }
+  
+  h1 {
+    /* text-align: center; */
+    /* margin-bottom: 100px; */
+    position: relative;
+    top: 50px;
+    font-size: 40px;
+  }
+  
+  .winners {
+    font-size: 100px;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 180px;
+    /* text-align: center; */
+    
+  }
+
+  .footer {
+    position: relative;
+    top: 810px;
+    font-size: 35px;
+    color: black;
+    background-color: azure;
+    height: 45px;
+  }
+}
