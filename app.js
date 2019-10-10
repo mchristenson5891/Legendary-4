@@ -227,7 +227,6 @@ const game = {
       && this.board[row - 3][col + 3]
       && this.board[row - 3][col + 3] == "R"
     ) {
-      // console.log("winner from -+")
       let winnerRed = document.querySelector(".winners")
       winnerRed.innerHTML = "Red Wins"
       gameEnded = true;
