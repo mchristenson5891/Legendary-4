@@ -9,4 +9,8 @@ To win Connect Four you must be the first player to get four of your colored che
 
 ##
 
+https://hassenh1.github.io/Legendary-4/
+
+##
+
 ![connect4](https://user-images.githubusercontent.com/48224444/66598972-1c3db900-eb57-11e9-80e9-2b129ba2aba9.PNG)
