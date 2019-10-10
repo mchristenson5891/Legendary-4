@@ -117,7 +117,7 @@ const game = {
       && this.board[row + 1][col - 1]
       && this.board[row + 1][col - 1] == "R"
       && this.board[row + 1]
-      && this.board[row - 1][col + 1]
+      && this.board[row + 1][col + 1]
       && this.board[row - 1][col + 1] == "R"
       && this.board[row - 2]
       && this.board[row - 2][col + 2]
@@ -241,7 +241,7 @@ const game = {
       && this.board[row + 1]
       && this.board[row + 1][col - 1]
       && this.board[row + 1][col - 1] == "B"
-      && this.board[row + 1]
+      && this.board[row - 1]
       && this.board[row - 1][col + 1]
       && this.board[row - 1][col + 1] == "B"
       && this.board[row - 2]
