@@ -1,4 +1,4 @@
-# Legendary Connect 4 
+## Legendary Connect 4 
 
 ![connect 4 image](connect4.PNG)
 
