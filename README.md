@@ -1,6 +1,6 @@
 # Legendary Connect 4 
 
-![connect 4 image](/Pictures/connect4.PNG)
+![connect 4 image](connect4.PNG)
 
 Summary:
 If your looking for a simple strategy game that can be played with just about anyone, including young children, Connect Four is for you. 
