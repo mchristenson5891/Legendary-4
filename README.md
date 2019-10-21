@@ -14,7 +14,7 @@ Technologies used:
 
 ##
 
-https://hassenh1.github.io/Legendary-4/
+[Play Here](https://hassenh1.github.io/Legendary-4/)
 
 ##
 
