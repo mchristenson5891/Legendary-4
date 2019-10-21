@@ -1,6 +1,6 @@
-let cell = document.querySelectorAll('.slot')
+let cell = document.querySelectorAll('.slot') // change this to a const 
 const table = document.querySelector('table')
-let gameEnded = false;
+let hasGameEnded = false;
 const game = {
   board: [
     [0, 0, 0, 0, 0, 0, 0],
@@ -9,6 +9,7 @@ const game = {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
   ],
+  
   isPlayerOne: true,
 
   toggleTurn: function () {
@@ -24,12 +25,15 @@ const game = {
       [0, 0, 0, 0, 0, 0, 0],
     ]
   },
+  
+  getPlayersColor: function() {
+    return this.isPlayerOne ? "B" : "R"
+  },
 
   placeChecker: (e) => {
     if (gameEnded) { return }
     let col = e.target.cellIndex
     let row = e.target.parentElement.rowIndex
-    // console.log(e.target.parentElement.rowIndex)
     if (game.board[row][col] === 0) {
       for (let i = row; i < 5; i++) {
         if (game.board[i][col] !== 0) {
@@ -59,14 +63,16 @@ const game = {
   },
 
   checkUpWinsR: function (col) {
+    let color = this.getPlayersColor()
     let rowArray = []
+    let whosTurn = game.isPlayerOne ? "B" : "R"
     for (let row = 0; row < this.board.length; row++) {
       rowArray.push(this.board[row][col])
     }
     let count = 1
     // console.log(rowArray)
     for (let i = 0; i <= rowArray.length; i++) {
-      if (rowArray[i] === "R" && rowArray[i + 1] === "R") {
+      if (rowArray[i] === whosTurn && rowArray[i + 1] === whosTurn) {
         count++
         // console.log(count, "<--count")
         if (count == 4) {
@@ -112,6 +118,19 @@ const game = {
 
   checkDieWinsR: function (row, col) {
     //fucking hell
+//     let count = 1
+//     for(let i = 1; i < 3; i++) {
+//        if (
+//          this.board[row][col] == color
+//       && this.board[row + i]
+//       && this.board[row + i][col - i] == color){
+//         count ++
+//        }
+      
+//       if(count === 4) {
+//         winnner
+//       }
+      
     if (this.board[row][col] == "R"
       && this.board[row + 1]
       && this.board[row + 1][col - 1]
@@ -359,15 +378,15 @@ const game = {
     //-+
     if (
       this.board[row][col] == "B"
-      && this.board[row - 1]
-      && this.board[row - 1][col + 1]
-      && this.board[row - 1][col + 1] == "B"
-      && this.board[row - 2]
-      && this.board[row - 2][col + 2]
-      && this.board[row - 2][col + 2] == "B"
-      && this.board[row - 3]
-      && this.board[row - 3][col + 3]
-      && this.board[row - 3][col + 3] == "B"
+      && this.board[row - i]
+      && this.board[row - i][col + i]
+      && this.board[row - i][col + i] == "B"
+//       && this.board[row - 2]
+//       && this.board[row - 2][col + 2]
+//       && this.board[row - 2][col + 2] == "B"
+//       && this.board[row - 3]
+//       && this.board[row - 3][col + 3]
+//       && this.board[row - 3][col + 3] == "B"
     ) {
       // console.log("winner from -+")
       let winnerRed = document.querySelector(".winners")
